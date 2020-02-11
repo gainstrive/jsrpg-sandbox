@@ -3,6 +3,17 @@
 /* ==================== START SCREEN 1  ================ */
 /* ===================================================== */
 
+#startWrapper {
+    overflow: hidden !important;
+}
+#startS1Wrapper {
+    display: block;
+    opacity: 1;
+}
+    #startS1Wrapper.fadeOut {
+        opacity: 0;
+        transition: 1.5s all ease-in-out;
+    }
 #startS1HeaderDiv {
     position: relative;
     top: 50px;
@@ -26,11 +37,15 @@
 }
     #startS1FormMessage {
         position: relative;
-        left: 70px;
+        left: 110px;
         width: 100%;
-        font-size: 28px;
+        font-size: 25px;
     }
     #startS1FormHelp {
+        transform: scale(.5);
+        position: relative;
+        left: -10px;
+        top: -2px;
         font-size: 18px;
         width: 40px;
         height: 40px;
@@ -38,7 +53,55 @@
         border: 1px dashed rgb(103, 255, 65);
         background-color: rgba(0, 0, 0, 0);
     }
+    #startS1Email {
+        margin-top: -15px;
+    }
+    #startS1Password {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #startS1Login {
+        width: 100%;
+    }
+    #startS1PasswordToggle {
+        position: relative;
+        top: 8px;
+    }
+    #startS1ToggleLabel {
+        position: relative;
+        top: 6px;
+        left: 12px;
+    }
+    #startS1SignUp {
+        margin-top: 20px;
+        width: 90%;
+    }
+#startS1GuestText {
+    margin-top: 15px;
+}
+#startS1Guest {
+    margin-top: -5px;
+    width: 100%;
+}
 
 /* ===================================================== */
 /* ==================== START SCREEN 2  ================ */
 /* ===================================================== */
+
+#startS3Wrapper {
+    display: none;
+}
+#startS3Wrapper.fadeIn {
+    display: block;
+    opacity: 1;
+    transition: 1.5s all ease-in-out;
+    animation: startS3FadeIn 1s ease-in-out;
+}
+@keyframes startS3FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
