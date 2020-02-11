@@ -1,0 +1,52 @@
+/* ===================================================== */
+/* ==================== ID STYLES  ===================== */
+/* ===================================================== */
+#modelViewerButtons {
+    background-color: rgba(25, 77, 9, 0.452);
+    border: 1.5px dashed rgb(60, 255, 0);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px dashed rgb(60, 255, 0);
+}
+#modelViewerHeader {
+    font-size: 30px;
+    border: 1.5px dashed rgb(60, 255, 0);
+    border-radius: 8px;
+}
+#modelViewerWrapper {
+    height: 450px;
+    overflow: hidden;
+    border: 1.5px dashed rgb(60, 255, 0);
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#modelViewerHeader {
+    height: 50px;
+    margin-bottom: -10px;
+}
+#modelsWrapper {
+    max-width: 750px;
+}
+#nextButton {
+    width: 90%;
+    margin: 10px 0 10px 0;
+}
+#prevButton {
+    width: 90%;
+    margin: 10px 0 10px 0;
+}
+
+/* ===================================================== */
+/* =================== CLASS STYLES  =================== */
+/* ===================================================== */
+.disabled {
+    user-select: none !important;
+}
+.model {
+    filter: drop-shadow(0px 0px 20px green);
+}
+.model1 {
+    position: relative;
+    top: 110px;
+}
