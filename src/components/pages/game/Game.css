@@ -1,0 +1,7 @@
+#gameScreen {
+    width: 500px;
+    height: 750px;
+    border: 1.5px dashed rgb(92, 177, 71) !important;
+    border-radius: 8px;
+    margin-top: 50px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Main.css";
 // import Skeleton from "../../enemies/skeleton/Skeleton";
-import Models from "../models/Models";
+import Navigation from "../../elements/navigation/Navigation";
 
 
 class Main extends Component {
@@ -12,9 +12,11 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="mainWrapper container text-center">
-        <h1 id="headline">JSRPG SANDBOX</h1>
-        <Models/>
+      <div className="mainWrapper">
+        <Navigation/>
+        <div id="mainBody" className="container text-center">
+            <h1 id="headline">JSRPG SANDBOX</h1>
+        </div>
       </div>
     )
   }
