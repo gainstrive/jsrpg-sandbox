@@ -10,21 +10,23 @@ function renderModel() {
         case 0:
             return (
                 <div>
-                    <Skeleton/>
+                    <Hellbat/>
                 </div>
             )
         case 1:
             return (
                 <div>
-                    <Hellbat/>
-                </div>
-            )
-        default:
-            return (
-                <div>
                     <Pumpking/>
                 </div>
             )
+        case 2:
+            return (
+                <div>
+                    <Skeleton/>
+                </div>
+            )
+        default:
+            break;
     }
 }
 

@@ -7,7 +7,7 @@ class Models extends Component {
 
   state = {
     currentModel: 0,
-    modelName: "SK3L3T0N"
+    modelName: "H3LLB4T"
   };
 
   modelNum = 0;
@@ -45,15 +45,14 @@ class Models extends Component {
   renderModelName = () => {
     switch (this.modelNum) {
       case 0:
-        this.setState({ modelName: "SK3L3T0N"});
+        this.setState({ modelName: "H3LLB4T" });
         break;
       case 1:
-        this.setState({ modelName: "H3LLB4T"});
+        this.setState({ modelName: "PUMPK1NG" });
         break;
       case 2:
-        this.setState({ modelName: "PUMPK1NG"});
+        this.setState({ modelName: "SK3L3T0N" });
         break;
-      case 3: 
       default:
         break;
     }
@@ -62,24 +61,18 @@ class Models extends Component {
   render() {
     return (
       <div>
-        
-        <Navigation/>
-
-        <br/>
-
+        <Navigation />
+        <br />
         <div id="modelsWrapper" className="container text-center">
           <div id="modelViewerHeader">
             <h1 id="modelName">{this.state.modelName}</h1>
           </div>
-        
           <br />
-
           <div id="modelViewerWrapper">
             <div id="model" className={"model model" + this.state.currentModel}>
               <ModelViewer currentModel={this.state.currentModel} />
             </div>
           </div>
-
           <div id="modelViewerButtons" className="container text-center">
             <div id="modelViewerButtonRow" className="row">
               <div className="col">
@@ -92,7 +85,6 @@ class Models extends Component {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     )
