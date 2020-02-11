@@ -1,0 +1,117 @@
+#pumpkingDiv {
+    position: relative;
+    overflow: hidden;
+    top: -80px;
+}
+.pumpkingFrame1 {
+    position: relative;
+    overflow: hidden;
+    animation: pumpkin1 2s infinite ease-in;
+    font-size: 1.7px;
+}
+@keyframes pumpkin1 {
+    0% {filter: drop-shadow(0px 0px 20px rgb(0, 226, 0)); top: 10px; transform: rotate(0deg);}
+    50% {filter: drop-shadow(0px 0px 10px green);top: 0px; transform: rotate(1deg);}
+    100% {filter: drop-shadow(0px 0px 20px rgb(0, 226, 0)); top: 10px; transform: rotate(0deg);}
+}
+.handLeft {
+    position: relative;
+    top: -250px;
+    animation: handLeft 1.2s infinite ease-in;
+    font-size: 1px !important; overflow: hidden; line-height: 1;
+}
+@keyframes handLeft {
+    0% {transform: rotate(0deg); left: -150px; top: -250px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));}
+    50% {transform: rotate(5deg); left: -130px; top: -260px;
+        filter: drop-shadow(0px 0px 10px rgb(0, 112, 0));}
+    100% {transform: rotate(0deg); left: -150px; top: -250px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));}
+}
+.handRight {
+    position: relative;
+    top:-520px;
+    right: -140px;
+    animation: handRight 1.5s infinite ease-in;
+    font-size:1px !important; overflow: hidden; line-height: 1;
+    filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));
+}
+@keyframes handRight {
+    0% {transform: rotate(0deg); right: -140px; top: -520px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));}
+    50% {transform: rotate(-5deg); right: -120px; top: -530px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 112, 0));}
+    100% {transform: rotate(0deg); right:-140px; top: -520px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));}
+}
+.crown {
+    position: relative;
+    top: 90px;
+    left: 120px;
+    transform: rotate(-20deg);
+    font-size:2px !important; overflow: hidden; line-height: 1;
+    animation: crown 3s infinite ease-in-out;
+}
+@keyframes crown {
+    0% {transform: rotate(-20deg); left:-70px; top: -995px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));}
+    50% {transform: rotate(-25deg); left:-80px; top: -993px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 112, 0));}
+    100% {transform: rotate(-20deg); left:-70px; top: -995px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 226, 0));}
+}
+.eyebrowRight {
+    color: rgb(30, 255, 0) !important;
+    position: relative;
+    top: 150px;
+    left: 250px;
+    font-size:2px !important; overflow: hidden; line-height: 1;
+    font-weight: bold !important;
+    transform: rotate(-50deg);
+    filter: drop-shadow(0px 0px 20px rgb(0, 85, 0));
+    animation: eyebrowRight .7s infinite ease-in-out;
+}
+@keyframes eyebrowRight {
+    0% {transform: rotate(-50deg); left: 60px; top: -1050px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 85, 0));}
+    50% {transform: rotate(-52deg); left: 62px; top: -1052px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 150, 0));}
+    100% {transform: rotate(-50deg); left: 60px; top: -1050px;
+        filter: drop-shadow(0px 0px 20px rgb(0, 85, 0));}
+}
+.eyebrowLeft {
+    color: rgb(27, 233, 0) !important;
+    position: relative;
+    top: 150px;
+    left: 150px;
+    font-weight: bold !important;
+    font-size:2px !important; overflow: hidden; line-height: 1;
+    transform: rotate(40deg);
+    filter: drop-shadow(0px 0px 50px rgb(0, 255, 0));
+    animation: eyebrowLeft .7s infinite ease-in-out;
+}
+@keyframes eyebrowLeft {
+    0% {transform: rotate(40deg); left:-50px; top: -1155px;;
+        filter: drop-shadow(0px 0px 20px rgb(0, 85, 0));}
+    50% {transform: rotate(42deg); left:-48px; top: -1157px;;
+        filter: drop-shadow(0px 0px 20px rgb(0, 1050, 0));}
+    100% {transform: rotate(40deg); left:-50px; top: -1155px;;
+        filter: drop-shadow(0px 0px 20px rgb(0, 85, 0));}
+}
+.hypnotize {
+    transition: all .5s ease-in-out;
+    color: rgb(99, 255, 79) !important;
+    position: absolute;
+    left: 110px;
+    top: 200px;
+    font-size:1px !important ;
+    animation: hypnotize .2s infinite ease-in-out;
+}
+@keyframes hypnotize {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+.hypnotizeDiv {
+    display: none;
+}

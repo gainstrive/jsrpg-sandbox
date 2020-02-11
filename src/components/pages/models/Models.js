@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./Models.css"
 import ModelViewer from "../../elements/modelViewer/ModelViewer";
+import Navigation from "../../elements/navigation/Navigation";
 
 class Models extends Component {
 
@@ -13,8 +14,8 @@ class Models extends Component {
 
   renderNextModel = () => {
     this.modelNum++;
-    if (this.modelNum >= 3) {
-      this.modelNum = 3;
+    if (this.modelNum > 2) {
+      this.modelNum = 2;
       document.getElementById("nextButton").classList.add("disabled");
     }
     else {
@@ -52,6 +53,7 @@ class Models extends Component {
       case 2:
         this.setState({ modelName: "PUMPK1NG"});
         break;
+      case 3: 
       default:
         break;
     }
@@ -59,34 +61,38 @@ class Models extends Component {
 
   render() {
     return (
-      <div id="modelsWrapper" className="container text-center">
-        <div id="modelViewerHeader">
-          <h1 id="modelName">{this.state.modelName}</h1>
-        </div>
+      <div>
         
-        <br />
+        <Navigation/>
 
-        <div id="modelViewerWrapper">
-          <div id="model" className={"model model" + this.state.currentModel}>
-            <ModelViewer currentModel={this.state.currentModel} />
+        <br/>
+
+        <div id="modelsWrapper" className="container text-center">
+          <div id="modelViewerHeader">
+            <h1 id="modelName">{this.state.modelName}</h1>
           </div>
-        </div>
+        
+          <br />
 
-        <div id="modelViewerButtons" className="container text-center">
-          <div className="row">
-            <div className="col">
-              <button id="prevButton" className="diabled btn btn-success"
-                type="button" onClick={() => this.renderPreviousModel()}>Prev.</button>
-            </div>
-            <div className="col">
-              <button id="nextButton" className="btn btn-success"
-                type="button" onClick={() => this.renderNextModel()}>Next</button>
+          <div id="modelViewerWrapper">
+            <div id="model" className={"model model" + this.state.currentModel}>
+              <ModelViewer currentModel={this.state.currentModel} />
             </div>
           </div>
-        </div>
 
-        <div id="modelViewerInfo" className="container text-center">
-              
+          <div id="modelViewerButtons" className="container text-center">
+            <div className="row">
+              <div className="col">
+                <button id="prevButton" className="diabled btn btn-success"
+                  type="button" onClick={() => this.renderPreviousModel()}>Prev.</button>
+              </div>
+              <div className="col">
+                <button id="nextButton" className="btn btn-success"
+                  type="button" onClick={() => this.renderNextModel()}>Next</button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     )

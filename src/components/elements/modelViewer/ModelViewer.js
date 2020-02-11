@@ -1,6 +1,7 @@
 import React from 'react';
 import Skeleton from "../../enemies/skeleton/Skeleton";
 import Hellbat from "../../enemies/hellbat/Hellbat";
+import Pumpking from "../../enemies/pumpking/Pumpking";
 import "./ModelViewer.css"
 
 const ModelViewer = (props) => {
@@ -21,6 +22,7 @@ function renderModel() {
         default:
             return (
                 <div>
+                    <Pumpking/>
                 </div>
             )
     }
