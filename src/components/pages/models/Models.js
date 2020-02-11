@@ -81,7 +81,7 @@ class Models extends Component {
           </div>
 
           <div id="modelViewerButtons" className="container text-center">
-            <div className="row">
+            <div id="modelViewerButtonRow" className="row">
               <div className="col">
                 <button id="prevButton" className="diabled btn btn-success"
                   type="button" onClick={() => this.renderPreviousModel()}>Prev.</button>

@@ -11,7 +11,9 @@ class Start extends Component {
         gameScreen.setAttribute("src", "/login");
     };
     render() {
+        
         return (
+
             <div id="startWrapper" className="container text-center">
 
                 <div id="startS1">

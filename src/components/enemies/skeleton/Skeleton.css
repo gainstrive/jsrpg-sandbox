@@ -8,6 +8,18 @@
     right: 0;
     margin: auto;
     overflow: hidden !important;
+    animation: skeletonGlow 2s infinite ease-in-out;
+}
+@keyframes skeletonGlow {
+    0% {
+        filter: drop-shadow(0px 0px 20px rgb(0, 187, 0));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 10px rgb(0, 187, 0));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 20px rgb(0, 187, 0));
+    }
 }
 .skeletonFrame1 {
     user-select: none;
