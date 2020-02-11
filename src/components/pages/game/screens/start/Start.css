@@ -1,0 +1,44 @@
+
+/* ===================================================== */
+/* ==================== START SCREEN 1  ================ */
+/* ===================================================== */
+
+#startS1HeaderDiv {
+    position: relative;
+    top: 50px;
+}
+    #startS1Header {
+        position: relative;
+        font-size: 60px;
+    }
+    #startS1SubHeader {
+        position: relative;
+        top: -20px;
+        font-size: 30px;
+    }
+#startS1EnemyDiv {
+    position: relative;
+    top: 30px;
+    height: 260px;
+}
+#startS1FormDiv {
+    position: relative;
+}
+    #startS1FormMessage {
+        position: relative;
+        left: 70px;
+        width: 100%;
+        font-size: 28px;
+    }
+    #startS1FormHelp {
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border: 1px dashed rgb(103, 255, 65);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+/* ===================================================== */
+/* ==================== START SCREEN 2  ================ */
+/* ===================================================== */

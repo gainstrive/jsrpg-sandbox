@@ -6,6 +6,11 @@ class Game extends Component {
     state = {
 
     }
+    componentDidMount() {
+        setTimeout(() => {
+            document.getElementById("gameScreen").classList.add("fadeIn");
+        }, 500);
+    }
     render() {
         return (
             <div id="gameWrapper" className="text-center">
