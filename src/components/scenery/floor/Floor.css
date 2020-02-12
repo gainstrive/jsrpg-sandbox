@@ -1,0 +1,7 @@
+.floor {
+    position: absolute;
+    top: 300px;
+    transform: rotate(90deg);
+    font-size: 2px !important;
+    opacity: .3;
+}
