@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import Hellbat from "../../../../enemies/hellbat/Hellbat"
+import Hellbat from "../../../../enemies/hellbat/Hellbat";
+import Floor from "../../../../scenery/floor/Floor";
+import LeftWall from "../../../../scenery/leftWall/LeftWall";
+import RightWall from "../../../../scenery/rightWall/RightWall";
 import "./Start.css";
 
 class Start extends Component {
     state = {
-
+        
     }
     handleScreenChange = () => {
         const gameScreen = window.parent.document.getElementById("gameScreen");
@@ -82,7 +85,23 @@ class Start extends Component {
                 </div>
 
                 <div id="startS3Wrapper">
-                    <h1>Test</h1>
+                    <div id="startS3HeaderDiv">
+                        <h1 id="startS3Header">JAVASCRIPT-RPG</h1>
+                        <h2 id="startS3SubHeader">A ROUGELITE DUNGEON CRAWLER</h2>
+                    </div>
+                    <div id="startS3Scenery">
+                        <Floor/>
+                        <LeftWall/>
+                        <RightWall/>
+                    </div>
+                    <div id="startS3ButtonDiv">
+                        <div className="col">
+                            <button id="startS3Continue" className="btn btn-success" type="button">CONTINUE ADVENTURE</button>
+                        </div>
+                        <div className="col">
+                            <button id="startS3CreateCharacter" className="btn btn-success" type="button">CREATE NEW CHARACTER</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>

@@ -1,5 +1,9 @@
 
 /* ===================================================== */
+/* = STYLES ARE ORDERED ACCORDING TO FIRST OCCURRENCE == */
+/* ===================================================== */
+
+/* ===================================================== */
 /* ==================== START SCREEN 1  ================ */
 /* ===================================================== */
 
@@ -85,7 +89,7 @@
 }
 
 /* ===================================================== */
-/* ==================== START SCREEN 2  ================ */
+/* ==================== START SCREEN 3  ================ */
 /* ===================================================== */
 
 #startS3Wrapper {
@@ -105,3 +109,60 @@
         opacity: 1;
     }
 }
+#startS3Wrapper {
+    height: 1000px;
+}
+#startS3HeaderDiv {
+    position: relative;
+    top: 50px;
+}
+    #startS3Header {
+        position: relative;
+        font-size: 60px;
+    }
+    #startS3SubHeader {
+        position: relative;
+        top: -20px;
+        font-size: 30px;
+    }
+.floor {
+    opacity: .3;
+    position: relative;
+    top: 160px;
+    left: -300px;
+    transform: matrix3d(2, 0, 1, 0, 
+    -1, 0, 0, -0.003, 
+    0, 0, 1, 0, 
+    201, 199, 0, 1);
+    transform-origin: 0px 0px 0px;
+    width: 500px;
+    height: 500px;
+    z-index: -1000;
+}
+.leftWall {
+    position: relative;
+    left: -350px;
+    top: -680px;
+    font-size: 4px;
+    opacity: .3;
+}
+.rightWall {
+    overflow: hidden !important;
+    position: relative;
+    right: -350px;
+    bottom: 1300px;
+    font-size: 4px;
+    opacity: .3;
+}
+#startS3ButtonDiv {
+    position: relative;
+    top: -1500px;
+    z-index: 1000;
+}
+    #startS3CreateCharacter {
+        margin-top: 15px;
+        width: 65%;
+    }
+    #startS3Continue {
+        width: 70%;
+    }
