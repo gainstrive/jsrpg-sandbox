@@ -13,6 +13,7 @@ body {
 /* ===================================================== */
 
 #gameScreen {
+        /* transform: scale(1); */
         opacity: 0;
         position: relative;
         margin-top: 50px;
