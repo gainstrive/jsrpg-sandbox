@@ -3,15 +3,102 @@ import Hellbat from "../../../../enemies/hellbat/Hellbat";
 import Floor from "../../../../scenery/floor/Floor";
 import LeftWall from "../../../../scenery/leftWall/LeftWall";
 import RightWall from "../../../../scenery/rightWall/RightWall";
+import buttonHoverSound from "../../../../../assets/audio/buttonHover.wav";
+import ProfileIcon from "../../../../UI/profileIcon/ProfileIcon";
 import "./Start.css";
+
+const game = {
+    config: {
+        musicVolume: .1,
+        sfxVolume: .1,
+    },
+    playSound: {
+        buttonHover: () => {
+            let soundEffect = new Audio(buttonHoverSound);
+            soundEffect.volume = game.config.sfxVolume;
+            soundEffect.play();
+        },
+    }
+}
 
 class Start extends Component {
     state = {
-        
+        startS3DisplayMessage: "",
+        displayName: "GUEST",
+    };
+    handleMouseOver = (elem, type, action, target) => {
+        if (type === "button") {
+            game.playSound.buttonHover();
+        }
+        if (action === "popupShow") {
+            document.getElementById(target).classList.remove("fadeOut");
+            document.getElementById(target).classList.add("fadeIn");
+        }
+        switch (elem) {
+            case "continue":
+                this.setState({
+                    startS3DisplayMessage: `Continue where you left off from the last time you played! While you're
+                    signed in on your account, JSRPG will keep track of your progress. Choosing continue
+                    will return you to the room you were at when you logged off.`
+                })
+                break;
+            case "createCharacter":
+                this.setState({
+                    startS3DisplayMessage: `*WARNING* This will override your saved progress (if it exists)
+                     once you finish character customization. Choose this if you wish to start the game
+                     from scratch or delete your existing save. Deleting a character is permanent and
+                     cannot be undone. 
+                    `
+                })
+                break;
+            case "options":
+                this.setState({
+                    startS3DisplayMessage: `View/change various in-game options like sound volume, game difficulty and
+                    more. If you are signed in, these options will also be saved for the next time you
+                    return to JSRPG. NOTE: Changing difficulty options count as using cheats which will disabled leaderboards
+                    for your current game.
+                    `
+                })
+                break;
+            case "back":
+                this.setState({
+                    startS3DisplayMessage: `Clicking the back arrow will return you to the login/signup screen. Remember...
+                    JSRPG can only save your data while you are logged in. By creating a free account, you'll be able to
+                    resume your game at any time from where you left off.
+                    `
+                })
+                break
+            case "profileIcon":
+                this.setState({
+                    startS3DisplayMessage: `This is a placeholder for your player icon! When you're logged in, clicking
+                    on this icon will allow you to view your account and change your profile icon. If you're not signed in, 
+                    the profile icon will show the placeholder. This feature is currently in development.
+                    `
+                })
+                break
+            default:
+                break;
+        }
+    };
+    handleMouseLeave = (elem, type, action, target) => {
+        if (action === "popupHide") {
+            document.getElementById(target).classList.remove("fadeIn");
+            document.getElementById(target).classList.add("fadeOut");
+            this.setState({
+                startS3displayMessage: "",
+            });
+        }
     }
-    handleScreenChange = () => {
-        const gameScreen = window.parent.document.getElementById("gameScreen");
-        gameScreen.setAttribute("src", "/login");
+    handleScreenChange = (nextScreen) => {
+        switch (nextScreen) {
+            case "characterCreate":
+                const gameScreen = window.parent.document.getElementById("gameScreen");
+                gameScreen.setAttribute("src", "/createCharacter");
+                break;
+        
+            default:
+                break;
+        }
     };
     handleScreenFadeOut = (screenOut, screenIn) => {
         setTimeout(() => {
@@ -20,6 +107,14 @@ class Start extends Component {
                     console.log(`handleFadeOut(${screenOut}, ${screenIn}) Called...`);
                     document.getElementById(screenOut).classList.add("fadeOut");
                     this.handleScreenFadeIn(screenOut, screenIn);
+                    break;
+                case "startS3Wrapper":
+                    console.log(`handleFadeOut(${screenOut}, ${screenIn}) Called...`);
+                    document.getElementById(screenOut).classList.remove("fadeIn");
+                    document.getElementById(screenOut).classList.add("fadeOut");
+                    setTimeout(() => {
+                        this.handleScreenChange("characterCreate");
+                    }, 1500);
                     break;
                 default:
                     break;
@@ -38,9 +133,17 @@ class Start extends Component {
                     break;
             }
         }, 1500);
+    };
+    componentDidMount() {
+        document.getElementById("profileIconDiv").addEventListener("mouseover", () => {
+            this.handleMouseOver("profileIcon", "button", "popupShow", "startS3DisplayMessageDiv");
+        });
+        document.getElementById("profileIconDiv").addEventListener("mouseleave", () => {
+            this.handleMouseLeave("profileIcon", "button", "popupHide", "startS3DisplayMessageDiv");
+        });
     }
     render() {
-        
+
         return (
 
             <div id="startWrapper" className="container text-center">
@@ -51,7 +154,7 @@ class Start extends Component {
                         <h2 id="startS1SubHeader">A ROUGELITE DUNGEON CRAWLER</h2>
                     </div>
                     <div id="startS1EnemyDiv">
-                        <Hellbat/>
+                        <Hellbat />
                     </div>
                     <div id="startS1FormDiv" className="container text-center">
                         <div className="row">
@@ -62,25 +165,25 @@ class Start extends Component {
                                 <button id="startS1FormHelp" className="btn btn-success" type="button">?</button>
                             </div>
                         </div>
-                            <input id="startS1Email" placeholder="ENTER YOUR EMAIL" className="form-control" type="text" name="" />
-                            <input id="startS1Password" placeholder="ENTER YOUR PASSWORD" className="form-control" type="text" name="" />
+                        <input id="startS1Email" placeholder="ENTER YOUR EMAIL" className="form-control" type="text" name="" />
+                        <input id="startS1Password" placeholder="ENTER YOUR PASSWORD" className="form-control" type="text" name="" />
                         <div className="row">
                             <div className="col">
                                 <button id="startS1Login" className="btn btn-success" type="button">LOGIN</button>
                             </div>
                             <div className="col">
-                                    <input id="startS1PasswordToggle" className="form-check-input" type="checkbox" name="" value="true" />
-                                    <label id="startS1ToggleLabel" htmlFor="startS1PasswordToggle" className="form-check-label">SHOW/HIDE PASSWORD!</label>
+                                <input id="startS1PasswordToggle" className="form-check-input" type="checkbox" name="" value="true" />
+                                <label id="startS1ToggleLabel" htmlFor="startS1PasswordToggle" className="form-check-label">SHOW/HIDE PASSWORD!</label>
                             </div>
                         </div>
                         <div className="col">
-                                <button id="startS1SignUp" className="btn btn-success" type="button">SIGN-UP NOW FOR FREE!</button>
+                            <button id="startS1SignUp" className="btn btn-success" type="button">SIGN-UP NOW FOR FREE!</button>
                         </div>
                     </div>
                     <div>
                         <h2 id="startS1GuestText">- OR -</h2>
-                        <button id="startS1Guest" onClick={() => this.handleScreenFadeOut("startS1Wrapper", "startS3Wrapper")} 
-                        className="btn btn-success" type="button">PLAY AS GUEST (LOCAL SAVES ONLY)</button>
+                        <button id="startS1Guest" onClick={() => this.handleScreenFadeOut("startS1Wrapper", "startS3Wrapper")}
+                            className="btn btn-success" type="button">PLAY AS GUEST (LOCAL SAVES ONLY)</button>
                     </div>
                 </div>
 
@@ -90,18 +193,42 @@ class Start extends Component {
                         <h2 id="startS3SubHeader">A ROUGELITE DUNGEON CRAWLER</h2>
                     </div>
                     <div id="startS3Scenery">
-                        <Floor/>
-                        <LeftWall/>
-                        <RightWall/>
+                        <Floor />
+                        <LeftWall />
+                        <RightWall />
                     </div>
                     <div id="startS3ButtonDiv">
                         <div className="col">
-                            <button id="startS3Continue" className="btn btn-success" type="button">CONTINUE ADVENTURE</button>
+                            <button id="startS3Continue" onMouseOver={() => this.handleMouseOver("continue", "button", "popupShow", "startS3DisplayMessageDiv")} 
+                            onMouseLeave={() => this.handleMouseLeave("continue", "button", "popupHide","startS3DisplayMessageDiv")} 
+                            className="btn btn-success" type="button">CONTINUE ADVENTURE</button>
                         </div>
                         <div className="col">
-                            <button id="startS3CreateCharacter" className="btn btn-success" type="button">CREATE NEW CHARACTER</button>
+                            <button id="startS3CreateCharacter" onMouseOver={() => this.handleMouseOver("createCharacter", "button", "popupShow", "startS3DisplayMessageDiv")}
+                            onMouseLeave={() => this.handleMouseLeave("createCharacter", "button", "popupHide", "startS3DisplayMessageDiv")}
+                            onClick={() => this.handleScreenFadeOut("startS3Wrapper", "characterCreate")}
+                            className="btn btn-success" type="button">CREATE NEW CHARACTER</button>
                         </div>
                     </div>
+                    <div id="startS3OptionsDiv" className="container text-center">
+                    <div className="row">
+                            <div className="col float-left">
+                                <button id="startS3Back" onMouseOver={() => this.handleMouseOver("back", "button", "popupShow","startS3DisplayMessageDiv")} 
+                                onMouseLeave={() => this.handleMouseLeave("back", "button", "popupHide","startS3DisplayMessageDiv")} 
+                                className="btn btn-success" type="button">BACK</button>
+                            </div>
+                            <div className="col float-right">
+                                <button id="startS3Options" onMouseOver={() => this.handleMouseOver("options", "button", "popupShow","startS3DisplayMessageDiv")} 
+                                onMouseLeave={() => this.handleMouseLeave("options", "button", "popupHide","startS3DisplayMessageDiv")} 
+                                className="btn btn-success" type="button">OPTIONS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="startS3DisplayMessageDiv" className="container text-center">
+                        <p id="startS3DisplayMessage">{this.state.startS3DisplayMessage}</p>
+                    </div>
+                        <ProfileIcon />
+                        <span id="startS3DisplayName">Logged in as: <span>{this.state.displayName}</span></span>
                 </div>
 
             </div>

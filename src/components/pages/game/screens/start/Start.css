@@ -95,20 +95,34 @@
 #startS3Wrapper {
     display: none;
 }
-#startS3Wrapper.fadeIn {
-    display: block;
-    opacity: 1;
-    transition: 1.5s all ease-in-out;
-    animation: startS3FadeIn 1s ease-in-out;
-}
-@keyframes startS3FadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
+    #startS3Wrapper.fadeIn {
+        display: block;
         opacity: 1;
+        transition: 1.5s all ease-in-out;
+        animation: startS3FadeIn 1s ease-in-out;
     }
-}
+    #startS3Wrapper.fadeOut {
+        display: block;
+            opacity: 0;
+            animation: startS3FadeOut 1s ease-in-out;
+            transition: 1s all ease-in-out;
+    }
+    @keyframes startS3FadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes startS3FadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
 #startS3Wrapper {
     height: 1000px;
 }
@@ -154,9 +168,15 @@
     font-size: 4px;
     opacity: .3;
 }
+#startS3DisplayName {
+    position: absolute;
+    top: 365px;
+    left: 35%;       
+    text-decoration: underline;  
+}
 #startS3ButtonDiv {
     position: relative;
-    top: -1500px;
+    top: -1460px;
     z-index: 1000;
 }
     #startS3CreateCharacter {
@@ -165,4 +185,68 @@
     }
     #startS3Continue {
         width: 70%;
+    }
+#startS3OptionsDiv {
+    position: relative;
+    top: -1260px;
+    z-index: 1000;
+}
+    #startS3Back {
+        float: left;
+        width: 100px;
+    }
+    #startS3Options {
+        float: right;
+        width: 100px;
+    }
+#startS3DisplayMessageDiv {
+    position: relative;
+    top: -1470px;
+    left: 10px;
+    width: 80%;
+    text-align: left !important;
+    text-indent: 25px;
+    border-radius: 8px;
+    display: block;
+    opacity: 1;
+}
+    #startS3DisplayMessageDiv.fadeOut {
+        opacity: 0;
+        transition: .5s all ease-in-out;
+    }
+    #startS3DisplayMessageDiv.fadeIn {
+        opacity: 1;
+        transition: .5s all ease-in-out;
+        animation: fadeIn 1s ease-in-out;
+    }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        #startS3DisplayMessage {
+            font-size: 14px;
+        }
+
+    #profileIconDiv {
+        position: absolute;
+        top: 160px;
+        left: 150px;
+    }
+    .profileIcon {
+        animation: profileIconGlow 2s infinite ease-in-out;
+    }
+    @keyframes profileIconGlow {
+        0% {
+            filter: drop-shadow(0px 0px 40px rgb(21, 255, 0));
+        }
+        50% {
+            filter: drop-shadow(0px 0px 40px rgb(23, 155, 11));
+        }
+        100% {
+            filter: drop-shadow(0px 0px 40px rgb(21, 255, 0));
+        }
     }
