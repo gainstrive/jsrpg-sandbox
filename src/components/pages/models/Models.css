@@ -4,20 +4,20 @@
 
 #modelViewerButtons {
     background-color: rgba(25, 77, 9, 0.452);
-    border: 1.5px dashed rgb(60, 255, 0);
+    border: 1.5px dashed rgb(103, 255, 65);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    border-top: 1px dashed rgb(60, 255, 0);
+    border-top: 1px dashed rgb(103, 255, 65);
 }
 #modelViewerHeader {
     font-size: 30px;
-    border: 1.5px dashed rgb(60, 255, 0);
+    border: 1.5px dashed rgb(103, 255, 65);
     border-radius: 8px;
 }
 #modelViewerWrapper {
     height: 450px;
     overflow: hidden;
-    border: 1.5px dashed rgb(60, 255, 0);
+    border: 1.5px dashed rgb(103, 255, 65);
     border-bottom: none;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
