@@ -1,0 +1,14 @@
+#profileIconDiv {
+    overflow: hidden !important;
+    position: absolute;
+    font-size: 3.5px;
+    clip-path: circle(50% at 50% 50%);
+    border: 1.5px dashed rgb(103, 255, 65);
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+#profileIconDiv:hover {
+    background-color: rgba(1, 61, 16, 0.377);
+    transition: .5s all ease-in-out;
+}
