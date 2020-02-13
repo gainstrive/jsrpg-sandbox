@@ -1,7 +1,9 @@
 /* ===================================================== */
 /* ================ DEFAULT DOM NODES ================== */
 /* ===================================================== */
-
+*::selection {
+  background: #3792269d; 
+}
 body {
   background-color: rgb(29, 28, 28) !important;
 }
@@ -33,7 +35,7 @@ input {
   outline: none;
 }
 .btn-success:hover {
-  background: rgb(63, 75, 46) !important;
+  background: rgb(26, 68, 24) !important;
   border: 1px rgb(134, 255, 104) dashed;
 }
 .dropdown-divider {
