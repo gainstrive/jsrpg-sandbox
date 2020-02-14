@@ -1,7 +1,7 @@
 import React from 'react';
-import Skeleton from "../../enemies/skeleton/Skeleton";
-import Hellbat from "../../enemies/hellbat/Hellbat";
-import Pumpking from "../../enemies/pumpking/Pumpking";
+import Skeleton from "../../ascii/skeleton/Skeleton";
+import Hellbat from "../../ascii/hellbat/Hellbat";
+import Pumpking from "../../ascii/pumpking/Pumpking";
 import "./ModelViewer.css"
 
 const ModelViewer = (props) => {
