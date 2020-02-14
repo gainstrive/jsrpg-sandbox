@@ -8,73 +8,63 @@ const ProfileIcon = () => {
       <div id="profileIconDiv" className="profileIconDiv">
             <pre className="profileIcon">
                 {String.raw`
-                                    ':/osyhhdhhhyso+/:.'                                              
-                               -smMMMMMMMMMMMMMMMMMMMMmdyo/-'                                       
-                             :dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNdy+-                                   
-                            oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMms-                                
-                           +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd+'                             
-                        :shNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo'                           
-                      'hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm/                          
-                     'dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh.                        
-                     +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm-                       
-                     mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm.                      
-                    :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy                      
-                    yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.                     
-                   'NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                     
-                   /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy                     
-                   yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd                     
-                   dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd                     
-                   mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh                     
-                   hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                     
-                   oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                     
-                   .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.                     
-                    yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd                      
-                    -NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo'                     
-                   .yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNy'                    
-                   oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:                    
-                   oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN'                    
-                   /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+                     
-                   'NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                      
-                    yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                       
-                    .NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-                       
-                     :NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh                        
-                      .yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy'                        
-                        ./hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNho-                          
-                          :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                             
-                          'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+                             
-                           yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-                             
-                           -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm                              
-                            oNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                              
-                             oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo                               
-                             +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd                                
-                             /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                                
-                             /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+                                
-                             :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                                
-                             -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                                
-                             .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+                                
-                             'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                                
-                             :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN-                               
-                           :dNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNy/.                            
-                           mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmh/'                         
-                           oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN-                         
-                            /mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                          
-                             .sNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                           
-                               -yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                            
-                                 -yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                             
-                                   -yNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN:                              
-                                     -yNMMMMMMMMMMMMMMMMMMMMMMMMMMMN/                               
-                                       -yNMMMMMMMMMMMMMMMMMMMMMMMMN/                                
-                                         -yNMMMMMMMMMMMMMMMMMMMMMN/                                 
-                                           :hNMMMMMMMMMMMMMMMMMMN/                                  
-                                             :dMMMMMMMMMMMMMMMMN/                                   
-                                              '+mMMMMMMMMMMMMMN/                                    
-                                                .sNMMMMMMMMMMN/                                     
-                                                  -dMMMMMMMMN/                                      
-                                                   'oNMMMMMN/                                       
-                                                     -mMMMN/                                        
-                                                      'dMN/                                         
-                                                       'd/                                          
-                                                        '                                           
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                 '..----..'                                                                                             
+                                                                                           ./oydNNNMMMMMMNNNdy+:'                                                                                       
+                                                                                        :smNMMMMMMMMMMMMMMMMMMMMNh/'                                                                                    
+                                                                                      /dMMMMMMMMMMMMMMMMMMMMMMMMMMMm+'                                                                                  
+                                                                                    :hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd.                                                                                 
+                                                                                 .+dNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm:                                                                                
+                                                                          's+/+sdNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd:                                                                              
+                                                                          -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNs'                                                                            
+                                                                          /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh'                                                                           
+                                                                          oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy                                                                           
+                                                                          sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                                                                          
+                                                                          sMMMMMMMMMMMMMMMMMMMMMNmddddmNMMMMMMMMMMMMMMMMMMMMMh                                                                          
+                                                                          +MMMMMMMMMMMMMMMMMMdo:.''  ''-/smMMMMMMMMMMMMMMMMMMm                                                                          
+                                                                          :MMMMMMMMMMMMMMMMh:'  .-/++/-'  .+mMMMMMMMMMMMMMMMMN                                                                          
+                                                                          'NMMMMMMMMMMMMMMs'  :ymMMMMMNms.  .hMMMMMMMMMMMMMMMd                                                                          
+                                                                           sMMMMMMMMMMMMMy   sMMMMMMMMMMMN/  'mMMMMMMMMMMMMMMo                                                                          
+                                                                           .NMMMMMMMMMMMM.  /MMMMMMMMMMMMMN'  +MMMMMMMMMMMMMN.                                                                          
+                                                                            oMMMMMMMMMMMN'  oMMMMMMMMMMMMMM.  /MMMMMMMMMMMMMo                                                                           
+                                                                            .dMMMMMMMMMMM:-/sMMMMMMMMMMMMMd'  oMMMMMMMMMMMMd'                                                                           
+                                                                           oNNMMMMMMMMMMMNMMMMMMMMMMMMMMNy.  -NMMMMMMMMMMMMN:                                                                           
+                                                                           dMMMMMMMMMMMMMMMMMMMMMMMMMMNs-  '/mMMMMMMMMMMMMMM+                                                                           
+                                                                           sMMMMMMMMMMMMMMMMMMMMMMMMNo'  '/dMMMMMMMMMMMMMMMM:                                                                           
+                                                                           :MMMMMMMMMMMMMMMMMMMMMMMh.  'omMMMMMMMMMMMMMMMMMm'                                                                           
+                                                                            dMMMMMMMMMMMMMMMMMMMMMd'  /NMMMMMMMMMMMMMMMMMMMo                                                                            
+                                                                            /MMMMMMMMMMMMMMMMMMMMM-  -MMMMMMMMMMMMMMMMMMMMN.                                                                            
+                                                                             yMMMMMMMMMMMMMMMMMMMMhyydMMMMMMMMMMMMMMMMMMMM/                                                                             
+                                                                              /yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo-                                                                              
+                                                                                mMMMMMMMMMMMMMMMMm+::oNMMMMMMMMMMMMMMMMs                                                                                
+                                                                                :MMMMMMMMMMMMMMMM+    yMMMMMMMMMMMMMMMm'                                                                                
+                                                                                 sMMMMMMMMMMMMMMMm+::sMMMMMMMMMMMMMMMM:                                                                                 
+                                                                                 'dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                                                                                  
+                                                                                  .dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs                                                                                   
+                                                                                   'hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                                                                                    
+                                                                                    .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMd                                                                                     
+                                                                                    :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMN'                                                                                    
+                                                                                    oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.                                                                                    
+                                                                                    hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/                                                                                    
+                                                                                  .-NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy-'                                                                                  
+                                                                                'hmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNms                                                                                 
+                                                                                'NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh                                                                                 
+                                                                                oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN-                                                                                
+                                                                               /NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm.                                                                               
+                                                                            '.+NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm:.                                                                             
+                                                                        './sdNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmho:.'                                                                        
+                                                                    '-+ydNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNds/.'                                                                    
+                                                               '.:ohmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNdy+-'                                                                
+                                                           '.:shmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmy+-'                                                            
+                                                       './sdNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmho:.'                                                       
+                                                   '.+ydMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNds/.'                                                   
+                                               '-+ymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNds/.'                                               
+                                           '-+hmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmy/.'                                           
+                                         -ymMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMdo.                                         
+                                       'yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN+                                        
+                                       yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:                                       
+                                       NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy                                       
 
                 `}
             </pre>
