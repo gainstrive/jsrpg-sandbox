@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Hellbat from "../../../../enemies/hellbat/Hellbat";
+import Hellbat from "../../../../ascii/hellbat/Hellbat";
 import Floor from "../../../../scenery/floor/Floor";
 import LeftWall from "../../../../scenery/leftWall/LeftWall";
 import RightWall from "../../../../scenery/rightWall/RightWall";
@@ -93,7 +93,7 @@ class Start extends Component {
         switch (nextScreen) {
             case "characterCreate":
                 const gameScreen = window.parent.document.getElementById("gameScreen");
-                gameScreen.setAttribute("src", "/createCharacter");
+                gameScreen.setAttribute("src", "/game/screens/createChar");
                 break;
         
             default:
