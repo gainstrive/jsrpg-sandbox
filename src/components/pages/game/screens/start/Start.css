@@ -99,13 +99,13 @@
         display: block;
         opacity: 1;
         transition: 1.5s all ease-in-out;
-        animation: startS3FadeIn 1s ease-in-out;
+        animation: startS3FadeIn 1.5s ease-in-out;
     }
     #startS3Wrapper.fadeOut {
         display: block;
             opacity: 0;
-            animation: startS3FadeOut 1s ease-in-out;
-            transition: 1s all ease-in-out;
+            animation: startS3FadeOut 1.5s ease-in-out;
+            transition: 1.5s all ease-in-out;
     }
     @keyframes startS3FadeIn {
         0% {
@@ -235,9 +235,9 @@
         position: absolute;
         top: 160px;
         left: 150px;
+        cursor: pointer;
     }
     .profileIcon {
-
         overflow: hidden !important;
         position: relative;
         top: 40px;
