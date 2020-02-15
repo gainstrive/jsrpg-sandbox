@@ -14,7 +14,7 @@ const routing = (
       <div>
         <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Game} />
+          <Route exact path="/" component={Main} />
           <Route exact path="/models" component={Models} />
           {/* GAME ROUTES */}
           <Route exact path="/game" component={Game} />
