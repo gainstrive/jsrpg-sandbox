@@ -1,15 +1,16 @@
 import React from "react";
 import "./Hellbat.css";
+import hellbatCrySound from "../../../assets/audio/hellbatCry.wav";
 
-const attackAnimation = () => {
-  const hellbatDiv = document.getElementById("hellbatDiv");
-  hellbatDiv.classList.add("swirl");
-  setTimeout(() => { hellbatDiv.classList.remove("swirl") }, 2000);
-}
-
-const Hellbat = () => {
+const Hellbat = (props) => {
+  const playSound = () => {
+    console.log(props.static);
+    let soundEffect = new Audio(hellbatCrySound);
+    soundEffect.volume = .1;
+    soundEffect.play();
+  }
     return (
-      <div id="hellbatDiv" className="hellbatDiv"  onClick={attackAnimation}>
+      <div id="hellbatDiv" className="hellbatDiv"  onClick={() => playSound()}>
         <pre className="hellbatFrame1">
         {String.raw`
                                                                       -hMy                                                                                                                              
