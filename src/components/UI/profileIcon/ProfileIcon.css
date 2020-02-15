@@ -12,4 +12,5 @@
     /* background-color: rgba(1, 61, 16, 0.377); */
     background: radial-gradient(circle, rgba(0, 255, 13, 0.212) 0%, rgba(29, 28, 28, 0.671) 100%);
     transition: .5s all ease-in-out;
+    filter: drop-shadow(0px 0px 50px green);
 }
