@@ -3,23 +3,9 @@ import Hellbat from "../../../../ascii/hellbat/Hellbat";
 import Floor from "../../../../scenery/floor/Floor";
 import LeftWall from "../../../../scenery/leftWall/LeftWall";
 import RightWall from "../../../../scenery/rightWall/RightWall";
-import buttonHoverSound from "../../../../../assets/audio/buttonHover.wav";
 import ProfileIcon from "../../../../UI/profileIcon/ProfileIcon";
+import game from "../../../../../logic/game/game";
 import "./Start.css";
-
-const game = {
-    config: {
-        musicVolume: .2,
-        sfxVolume: .2,
-    },
-    playSound: {
-        buttonHover: () => {
-            let soundEffect = new Audio(buttonHoverSound);
-            soundEffect.volume = game.config.sfxVolume;
-            soundEffect.play();
-        },
-    }
-}
 
 class Start extends Component {
     state = {
