@@ -43,7 +43,7 @@ body {
 }
 #gameScreen.fadeIn {
     opacity: 1;
-    transition: 2s all ease-in-out;
+    transition: .5s all ease-in-out;
 }
 #gameWrapper {
     width: 100%;
