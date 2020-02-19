@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import game from "../../../../../logic/game/game";
+import buttonHoverSound from "../../../../../assets/audio/buttonHover.wav";
 import "./CreateChar.css";
 
 class CreateChar extends Component {
@@ -13,7 +15,10 @@ class CreateChar extends Component {
         charisma: ""
     }
     componentDidMount() {
-
+        document.getElementById("createCharS1Wrapper").classList.add("fadeIn");
+    }
+    handleAcceptStats = () => {
+        localStorage.setItem("")
     }
     handleBackButton = (currentScreen) => {
 
@@ -25,19 +30,19 @@ class CreateChar extends Component {
 
     }
     handleMouseOver = (elem, type, action, target) => {
-
+        if (type === "button") {
+            game.playSound.sfx(buttonHoverSound);
+        }
     }
     handleRollStats = () => {
         if (this.state.rollsRemaining > 0) {
             const acceptStats = document.getElementsByClassName("acceptStats");
-            console.log(acceptStats)
             acceptStats[0].style.display = "inline-block";
             acceptStats[0].classList.add("buttonGlow");
             let statsArr = [];
             let rollsLeft = parseInt(this.state.rollsRemaining);
-            console.log(rollsLeft)
             for (let i = 0; i < 6; i++) {
-                let statInt = Math.floor(Math.random() * (20 - 9 + 1)) + 9;
+                let statInt = Math.floor(Math.random() * (20 - 7 + 1)) + 7;
                 statsArr.push(statInt);
             }
             this.setState({
@@ -61,7 +66,17 @@ class CreateChar extends Component {
 
     }
     handleScreenFadeIn = (screenOut, screenIn) => {
-
+        console.log(`handleScreenFadeIn("${screenIn}") Called...`);
+        setTimeout(() => {
+            switch (screenIn) {
+                case "createCharS1Wrapper":
+                    document.getElementById(screenOut).style.display = "none";
+                    document.getElementById(screenIn).classList.add("fadeIn");
+                    break;
+                default:
+                    break;
+            }
+        }, 1500);
     }
     handleScreenFadeOut = (screenOut, screenIn) => {
 
@@ -73,8 +88,9 @@ class CreateChar extends Component {
                     <h1 id="reRolls">REROLLS REMANINING:
                         <span id="rollsRemaining">&nbsp;{this.state.rollsRemaining}</span>
                     </h1>
-                    <button id="rollStats" className="btn btn-success"
-                        onClick={() => this.handleRollStats()} type="button">
+                    <button id="rollStats" className="btn btn-success" 
+                        onClick={() => this.handleRollStats()} type="button"
+                        onMouseOver={() => this.handleMouseOver("rollStats", "button")}>
                         CLICK TO RANDOMIZE STATS
                         </button>
                     <div id="statsDiv">
@@ -90,7 +106,10 @@ class CreateChar extends Component {
                         <p id="wisdomDescription">WIS determines your awareness and intuition.</p>
                         <h2 id="playerCha">CHARISMA: {this.state.charisma}</h2>
                         <p id="charismaDescription">CHA determines your ability to influence others.</p>
-                        <button id="acceptStats" className="btn btn-success acceptStats" type="button">ACCEPT YOUR FATE!</button>
+                        <button id="acceptStats" className="btn btn-success acceptStats" type="button"
+                        onMouseOver={() => this.handleMouseOver("rollStats", "button")}>
+                        ACCEPT YOUR FATE!
+                        </button>
                     </div>
                 </div>
             </div>
