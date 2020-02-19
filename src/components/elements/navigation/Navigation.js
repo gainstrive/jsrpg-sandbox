@@ -10,7 +10,7 @@ class Navigation extends React.Component {
                     <a className="navbar-brand" href="/">JSRPG</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="">MENU</span>
+                        <span id="toggler">MENU</span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav text-center">
