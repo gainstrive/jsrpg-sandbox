@@ -1,5 +1,3 @@
-import buttonHoverSound from "../../assets/audio/buttonHover.wav";
-
 
 const game = {
     config: {
@@ -9,11 +7,16 @@ const game = {
         },
     },
     playSound: {
-        buttonHover: () => {
-            let soundEffect = new Audio(buttonHoverSound);
-            soundEffect.volume = game.config.audio.sfxVolume;
-            soundEffect.play();
+        music: (file) => {
+            let music = new Audio(file);
+            music.volume = game.config.audio.musicVolume;
+            music.play();
         },
+        sfx: (file) => {
+            let sfx = new Audio(file);
+            sfx.volume = game.config.audio.sfxVolume;
+            sfx.play();
+        }
     },
     fn: {
         initConfig: () => {

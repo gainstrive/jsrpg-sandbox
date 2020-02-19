@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
+// ===============================================
+// =============== COMPONENETS ===================
+// ===============================================
 import Hellbat from "../../../../ascii/hellbat/Hellbat";
 import Floor from "../../../../scenery/floor/Floor";
 import LeftWall from "../../../../scenery/leftWall/LeftWall";
 import RightWall from "../../../../scenery/rightWall/RightWall";
 import ProfileIcon from "../../../../UI/profileIcon/ProfileIcon";
+// ===============================================
+// =============== GAME LOGIC  ===================
+// ===============================================
 import game from "../../../../../logic/game/game";
+// ===============================================
+// =============== SOUND FILES ===================
+// ===============================================
+import buttonHoverSound from "../../../../../assets/audio/buttonHover.wav";
+// ===============================================
+// =============== CSS STYLING ===================
+// ===============================================
 import "./Start.css";
-
 class Start extends Component {
     state = {
         startS3DisplayMessage: "",
@@ -22,7 +34,7 @@ class Start extends Component {
     }
     handleMouseOver = (elem, type, action, target) => {
         if (type === "button") {
-            game.playSound.buttonHover();
+            game.playSound.sfx(buttonHoverSound);
         }
         if (action === "popupShow") {
             document.getElementById(target).classList.remove("fadeOut");
@@ -89,7 +101,6 @@ class Start extends Component {
                 const gameScreen = window.parent.document.getElementById("gameScreen");
                 gameScreen.setAttribute("src", "/game/screens/createChar");
                 break;
-        
             default:
                 break;
         }
