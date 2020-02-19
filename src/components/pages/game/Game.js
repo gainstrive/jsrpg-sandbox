@@ -7,9 +7,19 @@ class Game extends Component {
 
     }
     componentDidMount() {
+        document.addEventListener("keyup", (e) => {
+            if (e.which === 192) {
+                this.testPage("/game/screens/createChar")
+            }
+        })
         setTimeout(() => {
             document.getElementById("gameScreen").classList.add("fadeIn");
         }, 500);
+    }
+    testPage = (path) => {
+        console.log(path);
+        const gameScreen = window.parent.document.getElementById("gameScreen");
+                gameScreen.setAttribute("src", path);
     }
     render() {
         return (
